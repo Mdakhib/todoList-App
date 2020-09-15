@@ -5,13 +5,14 @@ const app=express()
 app.get("/",(req,res)=>{
     
     var today=new Date();
-    if(today.getDate()==6 || today.getDate()==0){
-        res.send("Yay it's the weekend!");
+    var currentDay=today.getDate();
+    if(currentDay===6 || currentDay===0){
+        res.write(" <h1>Yay it's the weekend!</h1>");
     }
     else{
-        res.send("Boo! I have to work!")
+        res.sendFile(__dirname+"/index.html")
     }
-})
+});
 
 app.listen(3000,()=>{
     console.log("server is running at 3000");
