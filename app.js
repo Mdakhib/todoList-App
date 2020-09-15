@@ -3,7 +3,14 @@ const bodyParser=require("body-parser")
 const app=express()
 
 app.get("/",(req,res)=>{
-    res.send("the Todo-list is working")
+    
+    var today=new Date();
+    if(today.getDate()==6 || today.getDate()==0){
+        res.send("Yay it's the weekend!");
+    }
+    else{
+        res.send("Boo! I have to work!")
+    }
 })
 
 app.listen(3000,()=>{
