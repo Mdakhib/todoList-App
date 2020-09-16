@@ -6,8 +6,10 @@ const app=express()
 let items=["Khana","Peena","Sona"];
 
 
+
 app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static("public"));
 app.get("/",(req,res)=>{
     
     let today=new Date();
