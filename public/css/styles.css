@@ -55,7 +55,7 @@ h1 {
 input:checked+p {
   text-decoration: line-through;
   text-decoration-color: black;
-  /* font-weight: 800; */
+  font-weight: 800;
 }
 
 input[type="checkbox"] {
@@ -86,6 +86,7 @@ button {
   padding-bottom: 2px;
   border-width: 0;
   margin-top: 6px;
+  outline: none;
 }
 
 input[type="text"] {
@@ -113,7 +114,7 @@ input[type="text"]:focus {
 @media(max-width:465px){
   
   h1{
-    font-size: 30px;
+    font-size: 27px;
   }
 
   .box {
