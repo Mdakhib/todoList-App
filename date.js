@@ -11,7 +11,7 @@ module.exports.getDate=()=>{
 
     
 }
-module.exports.getDay=getDay;
+exports.getDay=getDay;
 function getDay(){
     let today=new Date();
     let options={
