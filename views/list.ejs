@@ -1,27 +1,24 @@
 <%- include("header") -%>    
    
-<div class="background">
-    <div class="container">
-        <div class="box-wrapper">
-            <div class="box" id="heading">
-                <h1 ><%= listTitle %> </h1>
-            </div>
-            
-            <div class="box-1">
-              <% for(let i=0;i<newListItems.length;i++){%>
-                    <div class="item">
-                        <input type="checkbox">
-                        <p>
-                            <%= newListItems[i] %>
-                        </p>
-                    </div>
-                <%} %>
-                <form action="/" method="POST">
-                    <input type="text" name="newItem" placeholder="New Item" autocomplete="off" >
-                    <button type="submit" name="list" value=<%= listTitle %>  >+</button>
-                </form>
-            </div>
-            <img src="/todo.jpg" alt="">
+<div class="container">
+    <div class="box-wrapper">
+        <div class="box" id="heading">
+            <h1 ><%= listTitle %> </h1>
+        </div>
+        
+        <div class="box-1">
+          <% for(let i=0;i<newListItems.length;i++){%>
+                <div class="item">
+                    <input type="checkbox">
+                    <p>
+                        <%= newListItems[i] %>
+                    </p>
+                </div>
+            <%} %>
+            <form action="/" method="POST">
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off" >
+                <button type="submit" name="list" value=<%= listTitle %>  >+</button>
+            </form>
         </div>
     </div>
 </div>
