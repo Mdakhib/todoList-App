@@ -1,4 +1,4 @@
-module.exports.getDate=()=>{
+exports.getDate=()=>{
     const today=new Date();
     const options={
         weekday:"long",
